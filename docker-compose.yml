@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  blog.api:
+    image: ${DOCKER_REGISTRY-}blogapi
+    build:
+      context: .
+      dockerfile: Src/Blog.Api/Dockerfile
+
+  blog.web:
+    image: ${DOCKER_REGISTRY-}blogweb
+    build:
+      context: .
+      dockerfile: Src/Blog.Web/Dockerfile
+

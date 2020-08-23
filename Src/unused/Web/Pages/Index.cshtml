@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Articles</h1>
+
+    <table class="table table-responsive-md">
+        <thead>
+            <tr>
+                <td>Date</td>
+                <td>Subject</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var article in Model.Articles)
+            {
+            <tr>
+                <td>@article.DateCreated</td>
+                <td>@article.Subject</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
